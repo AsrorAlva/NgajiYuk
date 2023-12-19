@@ -1,0 +1,85 @@
+.container-pembelajaran {
+  justify-content: center;
+}
+
+.judul {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  text-align: center;
+  margin-right: 20px;
+  padding-top: 20px;
+}
+
+.containerv {
+  justify-content: center;
+  text-align: center;
+  margin-left: 30px;
+  padding-top: 30px;
+}
+
+.materi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tiga kolom dalam satu baris */
+  gap: 10px; /* Jarak antar item */
+}
+
+.materip {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-content: center;
+  text-align: center;
+  margin-left: 90px;
+}
+
+.vidio {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.vidiop {
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.video img.materiv {
+  max-width: 80%; /* Mengisi lebar wadah */
+  height: auto; /* Menjaga aspek gambar */
+}
+
+.videop img.materip {
+  max-width: 50%; /* Mengisi lebar wadah */
+  height: auto; /* Menjaga aspek gambar */
+}
+
+@media screen and (max-width: 480px) {
+  .materi {
+    grid-template-columns: 1fr; /* Satu kolom dalam satu baris */
+  }
+
+  .materip {
+    grid-template-columns: 2fr; /* Satu kolom */
+  }
+
+  .video img.materiv {
+    max-width: 50%; /* Mengisi lebar wadah */
+    height: auto; /* Menjaga aspek gambar */
+    margin-right: 20px;
+  }
+  
+  .videop img.materip {
+    max-width: 55%; /* Mengisi lebar wadah */
+    height: auto; /* Menjaga aspek gambar */
+    justify-content: center;
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  .judul {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  
+}

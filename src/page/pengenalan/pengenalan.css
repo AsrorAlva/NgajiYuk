@@ -1,0 +1,123 @@
+/* pengenalan.css */
+
+/* Gaya untuk elemen pengenalan */
+.pengenalan {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.pengenalan h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Gaya untuk elemen materi1 */
+.materi1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 kotak per baris */
+  gap: 10px; /* Jarak antar kotak */
+}
+
+/* Gaya untuk elemen cardp */
+.materi1 .cardp {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(243, 243, 243, 0.1);
+  background-color: transparent;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.materi1 .cardp img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+/* Gaya untuk elemen cardp h3 */
+.materi1 .cardp h3 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Gaya untuk kontainer */
+.deskripsi {
+  display: flex;
+  justify-content: space-between; /* Menyisipkan ruang antara elemen */
+  align-items: center; /* Mengatur posisi elemen secara vertikal tengah */
+  margin-top: 40px; /* Margin bawah untuk memberi jarak antara kontainer-kontainer */
+  justify-content: center;
+}
+
+/* Gaya untuk elemen deskripsiapk */
+.deskripsiapk {
+  flex: 1; /* Menggunakan ruang yang tersedia di samping elemen lain */
+  padding-right: 20px; /* Memberi ruang antara deskripsi dan gambar */
+}
+
+.deskripsiapk p {
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: justify; /* Menengahkan teks */
+  margin-left: 50px;
+}
+
+/* Gaya untuk elemen gambarapk */
+.gambarapk {
+  flex: 1;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gambarapk img {
+  max-width: 40%; /* Gambar tidak melebihi lebar wadahnya */
+  height: auto; /* Menjaga aspek gambar */
+}
+
+/* Animasi ketika hover pada cardp */
+.materi1 .cardp:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+/* Responsif untuk tata letak pada layar yang lebih kecil */
+@media (max-width: 768px) {
+  /* Untuk elemen materi1 pada layar kecil */
+  .materi1 {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ); /* 2 kotak per baris pada layar kecil */
+    gap: 5px; /* Mengurangi jarak antar kotak pada layar kecil */
+  }
+
+  /* Untuk elemen cardp pada layar kecil */
+  .materi1 .cardp {
+    max-width: 100%; /* Mengisi lebar wadah */
+    margin: 0 auto 10px auto; /* Margin atas dan bawah 10px, mengatur posisi menjadi tengah */
+  }
+
+  /* Untuk elemen gambarapk pada layar kecil */
+  .deskripsiapk {
+    display: flex;
+    flex-direction: column; /* Mengatur tata letak menjadi vertikal */
+    align-items: center; /* Menengahkan teks dan gambar */
+    text-align: center; /* Menengahkan teks */
+  }
+
+  /* Untuk elemen gambarapk pada layar kecil */
+  .gambarapk {
+    margin-top: 10px; /* Memberi jarak antara teks dan gambar */
+    text-align: center; /* Mengatur gambar menjadi posisi tengah */
+  }
+
+  .gambarapk img {
+    max-width: 80%; /* Mengisi lebar wadah */
+  }
+}
